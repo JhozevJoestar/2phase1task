@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Beauty</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container_first">
+          <div class="logo_and_input">
+            <img src="./pictures/header/Logo.png" alt="logo" />
+            <input type="text" placeholder="Поиск" />
+            <button>Найти</button>
+          </div>
+          <button>Войти</button>
+          <img src="./pictures/main/menu.png" alt="" class="menu_icon" />
+        </div>
+        <div class="container_second">
+          <div class="links_container">
+            <div class="header_link">Красота и здоровье</div>
+            <div class="header_link">Детское</div>
+            <div class="header_link">Техника</div>
+            <div class="header_link">Животный</div>
+            <div class="header_link">Кино</div>
+            <div class="header_link">Книги</div>
+            <div class="header_link">Продукты</div>
+            <div class="header_link">Посуда</div>
+            <div class="header_link">Авто</div>
+            <div class="header_link">Другие</div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Темы</button>
+            <div class="dropdown-content">
+              <nav>
+                <ul>
+                  <li>Красота и здоровье</li>
+                  <li>Техника</li>
+                  <li>Животный</li>
+                  <li>Детское</li>
+                  <li>Кино</li>
+                  <li>Книги</li>
+                  <li>Продукты</li>
+                  <li>Посуда</li>
+                  <li>Авто</li>
+                  <li>Другие</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main_container">
+          <h1>Отзывы на фильм "Зеленая Миля"(1999)</h1>
+          <div class="container_title">
+            <img src="./pictures/main/Green_mile_film.jpg" alt="" />
+            <div class="movie_description">
+              Пол Эджкомб — начальник блока смертников в тюрьме «Холодная гора»,
+              каждый из узников которого однажды проходит «зеленую милю» по пути
+              к месту казни. Пол повидал много заключённых и надзирателей за
+              время работы. Однако гигант Джон Коффи, обвинённый в страшном
+              преступлении, стал одним из самых необычных обитателей блока.
+              <p>Оценка по миру:<br />9.1</p>
+            </div>
+          </div>
+          <h1 id="comments_title">Оставьте свой отзыв</h1>
+          <form class="comment_inputs">
+            <p>Имя</p>
+            <input type="text" value="" id="input-name" />
+            <p id="name-err"></p>
+            <p>Текст отзыва</p>
+            <textarea
+              placeholder=" "
+              maxlength="180"
+              cols="0"
+              rows="0"
+              id="textarea-text"
+            ></textarea>
+            <p id="text-err"></p>
+            <p>Дата</p>
+            <input type="date" value="" id="input-date" />
+            <input id="input-button" type="submit" value="Send" />
+          </form>
+          <div class="container_comments" id="comment-box"></div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+    <script src="./comments/comments.js"></script>
+  </body>
+</html>

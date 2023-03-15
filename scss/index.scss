@@ -1,0 +1,480 @@
+// Обнуление
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+html,
+body {  
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+}
+img {
+  vertical-align: top;
+}
+::placeholder {
+  color: #c4c4c4;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+// Переменные
+
+$perc100: 100%;
+$white: white;
+$none: none;
+
+// Основной код
+
+header {
+  width: $perc100;
+  height: auto;
+  background-color: $white;
+  margin-bottom: 50px;
+  .container_first {
+    width: 1160px;
+    height: $perc100;
+    margin: 0px auto;
+    padding: 18px 20px 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 210px;
+      height: 35px;
+      margin-right: 14px;
+    }
+    input {
+      width: 200px;
+      height: 40px;
+      border: 2px solid #ececec;
+      padding: 0 12px;
+      font-size: 16px;
+      margin-right: 14px;
+    }
+    button {
+      width: 100px;
+      height: 40px;
+      background-color: #eaeaea;
+      border: 0;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #666;
+    }
+  }
+  .container_second {
+    width: 100%;
+    height: 45px;
+    background: radial-gradient(circle, #ff8d00 50%, #ff6643 100%);
+    .links_container {
+      width: 1160px;
+      height: 45px;
+      margin: 0px auto;
+      padding: 0px 20px 0px 20px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.dropdown {
+  display: none;
+}
+
+#comments_title {
+  margin: 40px 0px 20px 0px;
+}
+
+main {
+  width: 100%;
+  min-height: 1000px;
+  .main_container {
+    width: 804px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      color: #444;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38px;
+    }
+    .container_title {
+      width: 100%;
+      margin-top: 30px;
+      display: flex;
+      img {
+        left: 0;
+      }
+      .movie_description {
+        width: 400px;
+        font-size: 19px;
+        line-height: 1.38;
+        margin-left: 30px;
+        p {
+          text-align: center;
+          font-size: 24px;
+          font-weight: 700;
+          margin-top: 50px;
+        }
+      }
+    }
+    .comment_inputs {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      p {
+        margin: 10px 0px 10px 0px;
+        color: black;
+        font-weight: 500;
+        font-size: 24px;
+      }
+      #input-name {
+        border: 1px solid black;
+        height: 30px;
+        padding-left: 5px;
+      }
+      textarea {
+        width: 350px;
+        height: 140px;
+        border: 1px solid black;
+        padding: 20px 0px 0px 20px;
+        text-align: left;
+      }
+      #input-button {
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+        margin: 10px 0px 10px 0px;
+        font-size: 20px;
+        background: black;
+        color: white;
+      }
+      #name-err,
+      #text-err {
+        width: 250px;
+        font-size: 16px;
+        color: red;
+      }
+    }
+    .container_comments {
+      width: 180px;
+      min-height: 500px;
+      .container_comment {
+        width: 500px;
+        min-height: 200px;
+        border-bottom: 1px solid orangered;
+        .comment_name {
+          margin: 30px 0px 0px 10px;
+          color: black;
+          font-size: 20px;
+        }
+        .comment_text {
+          margin: 20px 0px 0px 10px;
+          color: black;
+          width: 400px;
+          word-wrap: break-word;
+          height: auto;
+          font-size: 20px;
+        }
+        .comment_time {
+          margin: 10px 0px 20px 10px;
+          color: black;
+          font-size: 20px;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+          margin: 0px 0px 20px 10px;
+        }
+      }
+    }
+  }
+}
+
+.menu_icon {
+  display: none;
+}
+
+$red: #ff3252;
+
+.like-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-image: url(../pictures/main/unlike.png);
+}
+
+.liked {
+  width: 50px;
+  height: 50px;
+  color: $red;
+  font-size: 3em;
+  color: $red;
+  content: "♥";
+  left: 50%;
+  top: 50%;
+}
+
+@media (max-width: 1300px) {
+  header {
+    .container_first {
+      width: 1000px;
+    }
+    .container_second {
+      .links_container {
+        width: 1000px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    .container_first {
+      width: 767px;
+    }
+    .container_second {
+      .links_container {
+        width: 767px;
+        padding: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  header {
+    .container_first {
+      width: 608px;
+      padding: 18px 0px 18px 0px;
+      .menu_icon {
+        width: 50px;
+        height: 50px;
+        display: inline;
+      }
+      input {
+        display: none;
+      }
+      button {
+        display: none;
+      }
+    }
+    .container_second {
+      height: 70px;
+      .links_container {
+        width: 508px;
+        height: 70px;
+        flex-wrap: wrap;
+        .header_link {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    min-height: 100px;
+    .main_container {
+      width: 504px;
+      height: 700px;
+      margin: 0px auto;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        width: 400px;
+      }
+      .container_title {
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 300px;
+          left: 0;
+        }
+        .movie_description {
+          margin-left: 0px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  header {
+    .container_first {
+      width: 475px;
+    }
+    .container_second {
+      .links_container {
+        display: none;
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    min-height: 100px;
+    .main_container {
+      width: 374px;
+      height: 700px;
+      margin: 0px auto;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        width: 400px;
+      }
+      .container_title {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 300px;
+          left: 0;
+        }
+        .movie_description {
+          margin-left: 0px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    button {
+      background: radial-gradient(circle, #ff8d00 50%, #ff6643 100%);
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: $none;
+      cursor: pointer;
+      margin: 20px 0px 20px 20px;
+    }
+    .dropdown-content {
+      display: $none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      margin: -20px 0px 0px 20px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .dropdown-content li {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: $none;
+      display: block;
+    }
+    .dropdown-content li:hover {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover button {
+    background-color: #3e8e41;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    .container_first {
+      width: 90%;
+      .menu_icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .container_second {
+      .links_container {
+        width: 325px;
+        display: none;
+      }
+    }
+  }
+
+  main {
+    min-height: 600px;
+    .main_container {
+      width: 300px;
+      margin: 0px auto;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        width: 300px;
+        font-size: 22px;
+      }
+      .container_title {
+        .movie_description {
+          width: 300px;
+          margin-left: 0px;
+        }
+      }
+      .comment_inputs {
+        width: 300px;
+        #input-name {
+          width: 250px;
+        }
+        textarea {
+          width: 300px;
+        }
+      }
+      .container_comments {
+        width: 180px;
+        min-height: 300px;
+        .container_comment {
+          width: 300px;
+          min-height: 200px;
+          .comment_text {
+            margin: 20px 0px 0px 10px;
+            color: black;
+            width: 300px;
+            word-wrap: break-word;
+            height: auto;
+            font-size: 20px;
+          }
+          .comment_time {
+            margin: 10px 0px 20px 10px;
+            color: black;
+            font-size: 20px;
+          }
+          img {
+            width: 50px;
+            height: 50px;
+            margin: 0px 0px 20px 10px;
+          }
+        }
+      }
+    }
+  }
+}
